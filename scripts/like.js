@@ -15,8 +15,15 @@ const dialog = document.querySelector('.modal');
 const saveButton = document.querySelector('.save-button');
 const modalButton = document.querySelector('.modal__button');
 
-saveButton.addEventListener('click', () => dialog.showModal());
-modalButton.addEventListener('click', () => dialog.close());
+saveButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  dialog.showModal();
+});
+
+modalButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  dialog.close();
+});
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
