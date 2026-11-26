@@ -315,7 +315,12 @@
       </article>
     </main>
     <footer class="footer">
-      <button class="button save-button" type="button" aria-controls="dialog">
+      <button
+        class="button save-button"
+        type="button"
+        onclick="event.preventDefault(); document.getElementById('dialog').showModal();"
+        aria-controls="dialog"
+      >
         <svg class="floppy">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
@@ -329,7 +334,11 @@
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
-      <button type="button" class="button save-button modal__button">
+      <button
+        type="button"
+        class="button save-button modal__button"
+        onclick="event.preventDefault(); document.getElementById('dialog').close();"
+      >
         <span class="button__text">Ок</span>          
       </button>
     </dialog>
