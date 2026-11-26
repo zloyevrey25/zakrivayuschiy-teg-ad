@@ -11,6 +11,12 @@
 const likeHeartArray = document.querySelectorAll('.like-icon');
 const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
+const dialog = document.querySelector('.modal');
+const saveButton = document.querySelector('.save-button');
+const modalButton = document.querySelector('.modal__button');
+
+saveButton.addEventListener('click', () => dialog.showModal());
+modalButton.addEventListener('click', () => dialog.close());
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
